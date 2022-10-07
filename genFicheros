@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Fundamentos de Programación I
+#Departamento de Ingeniería Telemática
+#Universidad de Sevilla
+
+#Script que genera ficheros con distintos patrones
+
+mkdir -p /tmp/var/log/gdm
+for j in {0..4}
+do
+    for i in {1..20}
+    do
+	echo $i > /tmp/var/log/gdm/:$j.log.$i
+	echo $i > /tmp/var/log/gdm/:$j.lock.$i
+	echo $i > /tmp/var/log/gdm/:$j.$i.log
+    done
+done
